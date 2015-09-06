@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+<a class="btn btn-default" href="/activities/<%= activity._id%>/babies/new">Add a baby to this activity</a>
+
+<table class="table table-hover">
+<tr>
+<td >
+current activity info:
+	</td>
+	<td>
+Name:
+<%=activity.name  %>
+</td>
+<td >
+Location:
+<%=activity.location  %>
+</td>
+</tr>
+<tr>
+<td>
+Babies:
+</td>
+<td>
+<%activity.babies.forEach(function(baby){%>
+
+	<%= baby.name %>,
+	<%= baby.age  %>
+	<img style="width:50px;" src="<%= baby.image  %>" alt="">
+	
+<%})%>
+	</td>
+	
+<tr>
+
+</table>
+
+ 
+
+
+
+<% include ../partials/footer %>

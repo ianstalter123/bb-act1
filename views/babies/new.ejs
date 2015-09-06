@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+<h1>Add a baby to this activity</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/activities/<%= activity.id%>/babies" method="POST">
+  <div>
+    <label for="name">Name:</label>
+    <input autofocus  type="text" name="name" id="name">
+    <label for="Age">Age:</label>
+    <input autofocus  type="text" name="age" id="age">
+    <label for="Image">Image Url:</label>
+    <input autofocus  type="text" name="image" id="image">
+
+  </div>
+  <div>
+    <input type="submit" value="Add!">
+  </div>
+  </form>
+</body>
+</html>
+
+
+<% include ../partials/footer %>

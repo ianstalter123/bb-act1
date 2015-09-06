@@ -1,0 +1,22 @@
+<% include ../partials/header %>
+<a class="btn btn-default" href="/activities/new">Create a kids activity</a>
+<h1>Welcome to the activity index</h1>
+
+
+	<table class="table">
+<%activities.forEach(function(activity){%>
+<tr>
+<td>
+	<a class="btn btn-default" href="/activities/<%= activity._id%>"><%= activity.name%></a>
+	</td>
+	<td>
+	<img style="width:50px" src="<%= activity.image%>" alt="">
+	</td>
+	<%})  %>
+
+	</tr>
+	</table>
+
+<% include ../partials/footer %>
+
+

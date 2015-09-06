@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+<h1>new</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>new activity</title>
+</head>
+<body>
+  <form action="/activities" method="POST">
+  <div>
+    <label for="name">name:</label>
+    <input autofocus  type="text" name="name" id="name">
+  </div>
+  <div>
+    <label for="location">location:</label>
+    <input type="text" name="location" id="location">
+  </div>
+   <div>
+    <label for="image">image:</label>
+    <input type="text" name="image" id="image">
+  </div>
+  <div>
+    <input type="submit" value="Add!">
+  </div>
+  </form>
+</body>
+</html>
+<% include ../partials/footer %>
