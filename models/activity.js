@@ -5,6 +5,7 @@ var activitySchema = new mongoose.Schema({
                     name: String,
                     location: String,
                     image: String,
+                    date: String,
                     babies: [{
                       type: mongoose.Schema.Types.ObjectId,
                       ref: "Baby"

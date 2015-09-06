@@ -1,0 +1,31 @@
+<% include ../partials/header %>
+<h1>edit activity page</h1>
+
+<form action="/activities/<%= activity.id%>?_method=put" method="POST">
+  <div>
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" value = "<%= activity.name%>"autofocus>
+  </div>
+  <div>
+    <label for="location">Location: </label>
+    <input type="text" name="location" id="location"value = "<%= activity.location%>" autofocus>
+  </div>
+    <div>
+    <label for="location">Date: </label>
+    <input type="text" name="date" id="date"value = "<%= activity.date%>" autofocus>
+  </div>
+  <div>
+    <label for="image">Image: </label>
+    <input type="text" name="image" id="population"  autofocus value = "<%= activity.image%>">
+  </div>
+  <div>
+	    <%babies.forEach(function(baby){%>
+	    <input type="checkbox" name="babyid" id="baby.name"  autofocus value = "<%=baby._id  %>"><%=baby.name  %></input>
+			
+	   <% }) %>
+  </div>
+  
+  <input type="submit" value="Edit">
+</form>
+
+<% include ../partials/footer %>

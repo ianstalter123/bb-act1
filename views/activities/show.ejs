@@ -1,5 +1,6 @@
 <% include ../partials/header %>
 <a class="btn btn-default" href="/activities/<%= activity._id%>/babies/new">Add a baby to this activity</a>
+<a class="btn btn-default" href="/activities/<%= activity._id%>/edit">Edit this activity</a>
 
 <table class="table table-hover">
 <tr>
@@ -13,6 +14,10 @@ Name:
 <td >
 Location:
 <%=activity.location  %>
+</td>
+<td>
+Date:
+<%=activity.date  %>	
 </td>
 </tr>
 <tr>

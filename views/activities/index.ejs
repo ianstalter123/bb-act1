@@ -1,6 +1,6 @@
 <% include ../partials/header %>
 <a class="btn btn-default" href="/activities/new">Create a kids activity</a>
-<h1>Welcome to the activity index</h1>
+<h1>Browse and create activities</h1>
 
 
 	<table class="table">
@@ -11,6 +11,9 @@
 	</td>
 	<td>
 	<img style="width:50px" src="<%= activity.image%>" alt="">
+	</td>
+	<td>Date:
+	<%= activity.date%>
 	</td>
 	<%})  %>
 
