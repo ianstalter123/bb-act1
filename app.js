@@ -240,6 +240,6 @@ app.delete('/babies/:id', function(req, res) {
 
 app.use('/', apiRouter);
 
-app.listen(3000, function() {
-	"Server is listening on port 3000";
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Welcome to the machine");
 });
