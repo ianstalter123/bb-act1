@@ -1,0 +1,101 @@
+2015-09-07T04:19:54.659270+00:00 app[web.1]: npm ERR! If you need help, you may report this error at:
+2015-09-07T04:19:54.690356+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2015-09-07T04:19:54.690821+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2015-09-07T04:19:55.602520+00:00 heroku[web.1]: State changed from starting to crashed
+2015-09-07T04:19:55.589454+00:00 heroku[web.1]: Process exited with status 1
+2015-09-07T04:21:32.562509+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=3b00c776-e307-4414-8c91-e41610cfb73e fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:21:32.826492+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=23bd9199-2947-4e8e-9fe1-9db252d0a907 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:22:08.610889+00:00 heroku[slug-compiler]: Slug compilation started
+2015-09-07T04:22:08.610896+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-09-07T04:22:08.542000+00:00 heroku[api]: Deploy 223394f by istalter66@gmail.com
+2015-09-07T04:22:08.542181+00:00 heroku[api]: Release v5 created by istalter66@gmail.com
+2015-09-07T04:22:09.286501+00:00 heroku[web.1]: State changed from crashed to starting
+2015-09-07T04:22:11.090205+00:00 heroku[web.1]: Starting process with command `npm start`
+2015-09-07T04:22:13.346123+00:00 app[web.1]: npm ERR! Linux 3.13.0-61-generic
+2015-09-07T04:22:13.347036+00:00 app[web.1]: npm ERR! node v0.12.7
+2015-09-07T04:22:13.347848+00:00 app[web.1]: 
+2015-09-07T04:22:13.348242+00:00 app[web.1]: npm ERR! missing script: start
+2015-09-07T04:22:13.348245+00:00 app[web.1]: npm ERR! 
+2015-09-07T04:22:13.348246+00:00 app[web.1]: npm ERR! If you need help, you may report this error at:
+2015-09-07T04:22:13.348345+00:00 app[web.1]: npm ERR!     <https://github.com/npm/npm/issues>
+2015-09-07T04:22:13.355218+00:00 app[web.1]: 
+2015-09-07T04:22:13.346731+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2015-09-07T04:22:13.347671+00:00 app[web.1]: npm ERR! npm  v2.11.3
+2015-09-07T04:22:13.355406+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2015-09-07T04:22:13.355433+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2015-09-07T04:22:14.193275+00:00 heroku[web.1]: Process exited with status 1
+2015-09-07T04:22:14.244558+00:00 heroku[web.1]: State changed from starting to crashed
+2015-09-07T04:23:20.237736+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=d406af5b-5f7b-4f7e-865d-9585400cfb4d fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:23:20.717544+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=45e39581-2881-43e4-8d2e-f513afbe9049 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:23:21.500296+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=194bea5d-1edb-44bf-a8bd-c8ce2190c074 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:23:21.761933+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=a7169aa8-3d17-45ea-919c-7ed53a0cbd5d fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:24:45.987058+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=689e32e8-7be2-442f-8647-798368d4c922 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:24:46.289420+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=cf49091e-1a0f-46a3-bcb2-2f53e276a247 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:24:46.980536+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=3117f40f-8295-46a9-8b4f-30d7d36f9845 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:24:47.536045+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=73ff5059-0683-4735-abc2-39c42cfb8fab fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:24:47.899206+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=b587bfe0-50d8-47cf-9171-6cb6a3c78611 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:24:48.163569+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=75dafaf9-08e3-4f1d-b322-a599ec1db576 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:30:16.394464+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=f080adc1-7b7d-451a-b4a1-000d0a54b5f3 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:30:16.721259+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=242e5dc2-d4b8-4595-b20a-511cf990942f fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:30:17.431493+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=3b8c11c4-f0df-4cb8-9420-cfea4c4cd889 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:30:17.708662+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=931d4c2f-5c68-495f-91f8-6c286d812eef fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:30:18.119117+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=86a14a59-fcef-4b74-a0c9-5bd6a8a54e10 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:30:18.572671+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=bc506859-6c6f-41c7-b437-d4ee9c0f62cb fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:31:19.455232+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=c3facb7d-7d92-48e3-bdc3-b50d03d13d2d fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:31:19.733441+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=579e2200-a484-423e-9b0c-9b4a59eac790 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:31:20.243542+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=e934e377-328f-4b40-ba45-6f5dc623a65f fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:31:20.484610+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=9caab73f-2f96-44d3-8a34-a0f83e529771 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:16.391666+00:00 heroku[slug-compiler]: Slug compilation started
+2015-09-07T04:34:16.391689+00:00 heroku[slug-compiler]: Slug compilation finished
+2015-09-07T04:34:16.325456+00:00 heroku[api]: Deploy aed973d by istalter66@gmail.com
+2015-09-07T04:34:16.325817+00:00 heroku[api]: Release v6 created by istalter66@gmail.com
+2015-09-07T04:34:22.161733+00:00 heroku[web.1]: State changed from crashed to starting
+2015-09-07T04:34:25.138508+00:00 heroku[web.1]: Starting process with command `npm start`
+2015-09-07T04:34:29.666867+00:00 app[web.1]: npm ERR! Linux 3.13.0-61-generic
+2015-09-07T04:34:29.670159+00:00 app[web.1]: npm ERR! node v0.12.7
+2015-09-07T04:34:29.672812+00:00 app[web.1]: 
+2015-09-07T04:34:29.676410+00:00 app[web.1]: npm ERR! 
+2015-09-07T04:34:29.676658+00:00 app[web.1]: npm ERR! If you need help, you may report this error at:
+2015-09-07T04:34:29.676919+00:00 app[web.1]: npm ERR!     <https://github.com/npm/npm/issues>
+2015-09-07T04:34:29.687517+00:00 app[web.1]: 
+2015-09-07T04:34:29.691572+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2015-09-07T04:34:29.669211+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2015-09-07T04:34:29.672371+00:00 app[web.1]: npm ERR! npm  v2.11.3
+2015-09-07T04:34:29.675941+00:00 app[web.1]: npm ERR! missing script: start
+2015-09-07T04:34:29.691117+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2015-09-07T04:34:30.841426+00:00 heroku[web.1]: State changed from starting to crashed
+2015-09-07T04:34:30.841426+00:00 heroku[web.1]: State changed from crashed to starting
+2015-09-07T04:34:30.827478+00:00 heroku[web.1]: Process exited with status 1
+2015-09-07T04:34:33.138155+00:00 heroku[web.1]: Starting process with command `npm start`
+2015-09-07T04:34:35.475058+00:00 app[web.1]: npm ERR! Linux 3.13.0-57-generic
+2015-09-07T04:34:35.476044+00:00 app[web.1]: npm ERR! node v0.12.7
+2015-09-07T04:34:35.476744+00:00 app[web.1]: 
+2015-09-07T04:34:35.477152+00:00 app[web.1]: npm ERR! 
+2015-09-07T04:34:35.476984+00:00 app[web.1]: npm ERR! missing script: start
+2015-09-07T04:34:35.477313+00:00 app[web.1]: npm ERR! If you need help, you may report this error at:
+2015-09-07T04:34:35.477436+00:00 app[web.1]: npm ERR!     <https://github.com/npm/npm/issues>
+2015-09-07T04:34:35.482740+00:00 app[web.1]: 
+2015-09-07T04:34:35.483046+00:00 app[web.1]: npm ERR! Please include the following file with any support request:
+2015-09-07T04:34:35.483385+00:00 app[web.1]: npm ERR!     /app/npm-debug.log
+2015-09-07T04:34:35.475689+00:00 app[web.1]: npm ERR! argv "/app/.heroku/node/bin/node" "/app/.heroku/node/bin/npm" "start"
+2015-09-07T04:34:35.476475+00:00 app[web.1]: npm ERR! npm  v2.11.3
+2015-09-07T04:34:36.209708+00:00 heroku[web.1]: State changed from starting to crashed
+2015-09-07T04:34:36.192470+00:00 heroku[web.1]: Process exited with status 1
+2015-09-07T04:34:39.219154+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=e42b282d-2f39-48a9-9bcc-5013ac73b606 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:39.598687+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=e347ca8f-2b00-42c7-b929-d9954e2ab2e9 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:40.657305+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=a016b259-c7cf-42b3-85e4-1571540951d3 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:41.205664+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=cb89dabc-9d46-4617-8505-34bbdafee5d0 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:41.808137+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=59b95a54-5619-4974-bd75-fdb737f088a4 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:42.354890+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=8b7da188-d74b-4431-bffa-87c449783264 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:42.590668+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=01870483-4d09-4095-adf1-421fef90d3fe fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:43.323750+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=98128259-e5a3-4dc8-803c-742302a281da fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:43.340946+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=8f50764a-929d-4d1c-8a33-f1ee56174c85 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:44.153435+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=71f3b93a-44ab-42cc-8124-9d4b6e54df92 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:46.097460+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=691044c7-98e2-49b5-aaf9-9350013e2081 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:46.368220+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=745db6d7-2231-4d71-b7f7-1e5a195f2531 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:46.876079+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=25674132-223d-41c5-9c5b-cb4fc47fedb8 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:47.142977+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=1e864556-9a28-41bd-b7a7-fb119397fa18 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:47.556243+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=77d5adff-7357-4ce8-93d8-ec998903ec2e fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:47.839787+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=bd559757-9696-465a-86f1-da078be29c37 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:48.184229+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=nameless-reef-5028.herokuapp.com request_id=6a246e22-0ad5-4b43-836e-eacffe4ae835 fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
+2015-09-07T04:34:48.441090+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=nameless-reef-5028.herokuapp.com request_id=8f6f9c95-5b37-48de-ac5f-b84e780b470e fwd="173.11.101.122" dyno= connect= service= status=503 bytes=
