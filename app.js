@@ -2,7 +2,7 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	db = require("./models"),
 	app = express(),
-	methodOverride = require('method-override'),
+	methodOverride = require('method-override');
 	// favicon = require('serve-favicon');
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
