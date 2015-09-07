@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+
+<h1>Add a task to this activity</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/activities/<%= activity.id%>/tasks" method="POST">
+  <div>
+    <label for="name">Name:</label>
+    <input autofocus  type="text" name="name" id="name">
+    <label for="Completed">Completed:</label>
+    <input autofocus  type="text" name="completed" id="completed">
+  
+
+  </div>
+  <div>
+    <input type="submit" value="Add!">
+  </div>
+  </form>
+</body>
+</html>
+
+
+<% include ../partials/footer %>

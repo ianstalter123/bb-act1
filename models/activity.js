@@ -1,5 +1,6 @@
 var mongoose = require("mongoose");
 var Baby = require("./baby");
+var Task = require("./task");
 
 var activitySchema = new mongoose.Schema({
                     name: String,
@@ -10,7 +11,12 @@ var activitySchema = new mongoose.Schema({
                     babies: [{
                       type: mongoose.Schema.Types.ObjectId,
                       ref: "Baby"
+                    }],
+                    tasks: [{
+                      type: mongoose.Schema.Types.ObjectId,
+                      ref: "Task"
                     }]
+
                   });
 
 //hook - runs before we delete a zoo and its
@@ -19,6 +25,7 @@ var activitySchema = new mongoose.Schema({
 activitySchema.pre('remove', function(callback) {
     Baby.remove({activity_id: this._id}).exec();
     callback();
+    
 });
 
 var Activity = mongoose.model("Activity", activitySchema);

@@ -11,6 +11,20 @@ app.controller('ActivitiesController', function($scope, $http) {
             .error(function(data) {
                 console.log('Error: ' + data);
             });
+    }, 
+
+    $scope.getAct = function(){
+        console.log("tryin");
+
+          $http.get('/data')
+            .success(function(data) {
+                console.log(data);
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            });
+
+
     }
   
 })

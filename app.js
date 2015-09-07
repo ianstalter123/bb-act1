@@ -23,27 +23,36 @@ app.use(favicon(__dirname + '/public/favicon.ico'));
 //   console.log('park saved successfully!');
 // });
 
-app.get("/", function(req, res) {
-	res.redirect("/activities")
-})
+
 
 var apiRouter = express.Router();
 
 apiRouter.route('/votes/:id')
-.get(function(req,res){
-  //return res.json({message: "Nice you hit the HTTP request :: " + req.params.id});
-  db.Activity.findById(req.params.id, function(err, activity) {
-  	if(activity.votes >= 0){
-				activity.votes = activity.votes+1
-			}
-			else {
+	.get(function(req, res) {
+		//return res.json({message: "Nice you hit the HTTP request :: " + req.params.id});
+		db.Activity.findById(req.params.id, function(err, activity) {
+			if (activity.votes >= 0) {
+				activity.votes = activity.votes + 1
+			} else {
 				activity.votes = 1
 			}
-			
-				activity.save();
-				res.redirect("/activities/");
-			});
-})
+
+			activity.save();
+			res.redirect("/activities/");
+		});
+	})
+
+apiRouter.route('/data')
+	.get(function(req, res) {
+		db.Activity.find({}, function(err, activities) {
+			if (err) {
+				console.log(err)
+			} else {
+				console.log(activities)
+				res.send(activities);
+			}
+		})
+	})
 
 app.get("/activities", function(req, res) {
 	db.Activity.find({}, function(err, activities) {
@@ -63,12 +72,54 @@ app.get('/activities/new', function(req, res) {
 
 // SHOW
 app.get('/activities/:id', function(req, res) {
-	db.Activity.findById(req.params.id).populate("babies").exec(function(err, activity) {
+	db.Activity.findById(req.params.id).populate("babies").populate("tasks").exec(function(err, activity) {
 		res.render("activities/show", {
 			activity: activity
 		});
 	})
 
+});
+
+app.get('/activities/:id/tasks/new', function(req, res) {
+	db.Activity.findById(req.params.id).populate("babies","tasks").exec(function(err, activity) {
+		res.render("tasks/new", {
+			activity: activity
+		});
+	})
+
+});
+
+app.get('/activities/:id/tasks/new', function(req, res) {
+	db.Activity.findById(req.params.id).populate("babies").exec(function(err, activity) {
+		res.render("tasks/new", {
+			activity: activity
+		});
+	})
+
+});
+
+// CREATE baby
+app.post('/activities/:id/tasks', function(req, res) {
+
+	db.Task.create({
+		name: req.body.name,
+		completed: req.body.completed,
+	}, function(err, task) {
+		console.log(task)
+		if (err) {
+			console.log(err);
+			console.log("pIZIZIPZIP")
+			res.render("tasks/new");
+		} else {
+			db.Activity.findById(req.params.id, function(err, activity) {
+				activity.tasks.push(task);
+				task.activity = activity._id;
+				task.save();
+				activity.save();
+				res.redirect("/activities/" + req.params.id);
+			});
+		}
+	});
 });
 
 // EDIT
@@ -99,7 +150,7 @@ app.put('/activities/:id', function(req, res) {
 			image: req.body.image,
 			date: req.body.date,
 			babies: req.body.babyid,
-		
+
 		},
 		function(err, activity) {
 			if (err) {
@@ -175,17 +226,16 @@ app.post('/activities', function(req, res) {
 });
 
 // DESTROY
-app.delete('/babies/:id', function(req,res){
- db.Baby.findByIdAndRemove(req.params.id,
-      function (err, baby) {
-        if(err) {
-          console.log(err);
-          res.render("/babies/");
-        }
-        else {
-          res.redirect("/babies/");
-        }
-      });
+app.delete('/babies/:id', function(req, res) {
+	db.Baby.findByIdAndRemove(req.params.id,
+		function(err, baby) {
+			if (err) {
+				console.log(err);
+				res.render("/babies/");
+			} else {
+				res.redirect("/babies/");
+			}
+		});
 });
 
 app.use('/', apiRouter);

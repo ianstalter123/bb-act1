@@ -2,29 +2,7 @@
 <a class="btn btn-default" href="/activities/new">Create a kids activity</a>
 <h1>Browse and create activities</h1>
 
-
-	<table ng-controller="ActivitiesController" class="table">
-
-<%activities.forEach(function(activity){%>
-<tr>
-<td>
-	<a class="btn btn-default" href="/activities/<%= activity._id%>"><%= activity.name%></a>
-	</td>
-	<td>
-	<img style="width:50px" src="<%= activity.image%>" alt="">
-	</td>
-	<td>Date:
-	<%= activity.date%>
-	</td>
-	<td><span ng-click="upVote('<%=activity._id%>')" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-	Votes:
-	<%= activity.votes%>
-	</td>
-	<%})  %>
-
-	</tr>
-	</table>
-<h1>View past activities</h1>
+<div ng-view></div>
 
 <% include ../partials/footer %>
 

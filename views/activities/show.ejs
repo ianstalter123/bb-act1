@@ -1,44 +1,62 @@
 <% include ../partials/header %>
 <a class="btn btn-default" href="/activities/<%= activity._id%>/babies/new">Add a baby to this activity</a>
 <a class="btn btn-default" href="/activities/<%= activity._id%>/edit">Edit this activity</a>
+<a class="btn btn-default" href="/activities/<%= activity._id%>/tasks/new">Add a task to this activitiy</a>
 
 <table class="table table-hover">
-<tr>
-<td >
-current activity info:
-	</td>
-	<td>
-Name:
-<%=activity.name  %>
-</td>
-<td >
-Location:
-<%=activity.location  %>
-</td>
-<td>
-Date:
-<%=activity.date  %>	
-</td>
-</tr>
-<tr>
-<td>
-Babies:
-</td>
-<td>
-<%activity.babies.forEach(function(baby){%>
+	<tr>
+		<td >
+			current activity info:
+		</td>
+		<td>
+			Name:
+			<%=activity.name  %>
+		</td>
+		<td >
+			Location:
+			<%=activity.location  %>
+		</td>
+		<td>
+			Date:
+			<%=activity.date  %>	
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Babies:
+		</td>
+		<td>
+			<%activity.babies.forEach(function(baby){%>
 
-	<%= baby.name %>,
-	<%= baby.age  %>
-	<img style="width:50px;" src="<%= baby.image  %>" alt="">
-	
-<%})%>
+			<%= baby.name %>,
+			<%= baby.age  %>
+			<img style="width:50px;" src="<%= baby.image  %>" alt="">
+			
+			<%})%>
+		</td>
+	</tr>
+	<tr>
+		
+		<td>
+			Tasks:
+		</td>
+		
+		<%activity.tasks.forEach(function(task){%>
+		
+		<td>
+			<%= task.name %>,
+			<%= task.completed  %>
+			
+			<%})%>
+		</tr>
+		
 	</td>
 	
-<tr>
+
 
 </table>
 
- 
+
 
 
 

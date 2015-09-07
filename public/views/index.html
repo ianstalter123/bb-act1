@@ -1,0 +1,23 @@
+<table ng-controller="AppController" class="table">
+
+<tr ng-repeat="t in test | orderBy:'-votes' | filter: search" >
+<td>
+	<a href="/activities/{{t._id}}" class="btn btn-default" >{{t.name}}</a>
+	</td>
+	<td>
+	<img style="width:50px" src="{{t.image}}" alt="">
+	</td>
+	<td>Date:
+	{{t.date}}
+	</td>
+	<td>
+
+	<span ng-click="upVote(t._id)" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+	Votes:
+	{{t.votes}}
+	</td>
+	
+
+	</tr>
+	</table>
+<h1>View past activities</h1>
