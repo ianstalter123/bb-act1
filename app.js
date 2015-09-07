@@ -3,14 +3,14 @@ var express = require('express'),
 	db = require("./models"),
 	app = express(),
 	methodOverride = require('method-override'),
-	favicon = require('serve-favicon');
+	// favicon = require('serve-favicon');
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
 app.use(methodOverride('_method'));
-app.use(favicon(__dirname + '/public/favicon.ico'));
+// app.use(favicon(__dirname + '/public/favicon.ico'));
 
 // var park = new db.Activity({
 //   name: 'go to park',
