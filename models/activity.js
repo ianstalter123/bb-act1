@@ -6,6 +6,7 @@ var activitySchema = new mongoose.Schema({
                     location: String,
                     image: String,
                     date: String,
+                    votes: Number,
                     babies: [{
                       type: mongoose.Schema.Types.ObjectId,
                       ref: "Baby"

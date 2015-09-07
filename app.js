@@ -27,6 +27,24 @@ app.get("/", function(req, res) {
 	res.redirect("/activities")
 })
 
+var apiRouter = express.Router();
+
+apiRouter.route('/votes/:id')
+.get(function(req,res){
+  //return res.json({message: "Nice you hit the HTTP request :: " + req.params.id});
+  db.Activity.findById(req.params.id, function(err, activity) {
+  	if(activity.votes >= 0){
+				activity.votes = activity.votes+1
+			}
+			else {
+				activity.votes = 1
+			}
+			
+				activity.save();
+				res.redirect("/activities/");
+			});
+})
+
 app.get("/activities", function(req, res) {
 	db.Activity.find({}, function(err, activities) {
 		if (err) {
@@ -169,6 +187,8 @@ app.delete('/babies/:id', function(req,res){
         }
       });
 });
+
+app.use('/', apiRouter);
 
 app.listen(3000, function() {
 	"Server is listening on port 3000";

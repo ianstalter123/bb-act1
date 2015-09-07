@@ -3,7 +3,8 @@
 <h1>Browse and create activities</h1>
 
 
-	<table class="table">
+	<table ng-controller="ActivitiesController" class="table">
+
 <%activities.forEach(function(activity){%>
 <tr>
 <td>
@@ -15,10 +16,15 @@
 	<td>Date:
 	<%= activity.date%>
 	</td>
+	<td><span ng-click="upVote('<%=activity._id%>')" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+	Votes:
+	<%= activity.votes%>
+	</td>
 	<%})  %>
 
 	</tr>
 	</table>
+<h1>View past activities</h1>
 
 <% include ../partials/footer %>
 
