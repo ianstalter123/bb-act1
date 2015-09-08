@@ -3,7 +3,7 @@ var express = require('express'),
 	db = require("./models"),
 	app = express(),
 	methodOverride = require('method-override');
-	// favicon = require('serve-favicon');
+// favicon = require('serve-favicon');
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
@@ -54,6 +54,10 @@ apiRouter.route('/data')
 		})
 	})
 
+app.get("/", function(req, res) {
+	res.redirect("/activities")
+})
+
 app.get("/activities", function(req, res) {
 	db.Activity.find({}, function(err, activities) {
 		if (err) {
@@ -81,7 +85,7 @@ app.get('/activities/:id', function(req, res) {
 });
 
 app.get('/activities/:id/tasks/new', function(req, res) {
-	db.Activity.findById(req.params.id).populate("babies","tasks").exec(function(err, activity) {
+	db.Activity.findById(req.params.id).populate("babies", "tasks").exec(function(err, activity) {
 		res.render("tasks/new", {
 			activity: activity
 		});
@@ -240,6 +244,6 @@ app.delete('/babies/:id', function(req, res) {
 
 app.use('/', apiRouter);
 
-app.listen(process.env.PORT || 3002, function(){
-  console.log("Welcome to the machine");
+app.listen(process.env.PORT || 3002, function() {
+	console.log("Welcome to the machine");
 });
