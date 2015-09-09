@@ -1,2 +1,2 @@
 # bb-act1
-[link](https://nameless-reef-5028.herokuapp.com/activities#/)
+[Link to the website](https://nameless-reef-5028.herokuapp.com/activities#/)
