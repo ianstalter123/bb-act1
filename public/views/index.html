@@ -2,7 +2,7 @@
 
 <tr ng-repeat="item in test | orderBy:'-votes' | filter: search" >
 <td>
-	<a href="/activities/{{item._id}}" class="btn btn-default" >{{t.name}}</a>
+	<a href="/activities/{{item._id}}" class="btn btn-default" >{{item.name}}</a>
 	</td>
 	<td>
 	<img style="width:50px" src="{{item.image}}" alt="">
