@@ -10,19 +10,11 @@ app.controller('ActivitiesController', function($scope, $http) {
         });
 
 
-    $scope.upVote = function(id) {
+    $scope.upVote = function(item) {
             console.log("trying to vote")
 
-            $http.get('/votes/' + id)
-                .success(function(d) {
-                    $http.get('/data')
-                        .success(function(data) {
-                            $scope.test = data;
-                            
-                            console.log(data)
-                        })
-
-                });
+            $http.get('/votes/' + item._id)
+            item.votes += 1
         },
 
         $scope.getAct = function() {
