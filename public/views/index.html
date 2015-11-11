@@ -1,6 +1,6 @@
 <table class="table">
 
-<tr ng-repeat="item in test | orderBy:'-votes' | filter: search | filter: item.completed === 'false'" >
+<tr ng-repeat="item in test | orderBy:'-votes' | filter: search " >
 <td>
 	<a href="/activities/{{item._id}}" class="btn btn-default" >{{item.name}}</a>
 	</td>
