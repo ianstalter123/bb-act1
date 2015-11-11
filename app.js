@@ -279,7 +279,8 @@ app.post('/activities', function(req, res) {
 	db.Activity.create({
 		name: req.body.name,
 		location: req.body.location,
-		image: req.body.image
+		image: req.body.image,
+		completed: 'false'
 	}, function(err, activity) {
 		if (err) {
 			console.log(err);
