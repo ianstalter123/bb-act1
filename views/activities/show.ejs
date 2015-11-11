@@ -40,18 +40,24 @@
 		<td>
 			Tasks:
 		</td>
+		<td>
+		
+
+				<%=activity.user  %>
+			
+		</td>
 		
 		<%activity.tasks.forEach(function(task){%>
-	
-	<tr>	
-		<td>
-			<%= task.name %>,
-			<%= task.completed  %>
-			
-			<%})%>
-		</tr>
-		
-	</td>
+
+		<tr>	
+			<td>
+				<%= task.name %>,
+				<%= task.completed  %>
+
+				<%})%>
+			</tr>
+
+		</td>
 	</tr>
 	
 

@@ -1,9 +1,11 @@
 var mongoose = require("mongoose");
 var Baby = require("./baby");
 var Task = require("./task");
+var Account = require("./account");
 
 var activitySchema = new mongoose.Schema({
                     name: String,
+                    completed: String,
                     location: String,
                     image: String,
                     date: String,
@@ -11,6 +13,10 @@ var activitySchema = new mongoose.Schema({
                     babies: [{
                       type: mongoose.Schema.Types.ObjectId,
                       ref: "Baby"
+                    }],
+                     accounts: [{
+                      type: mongoose.Schema.Types.ObjectId,
+                      ref: "Account"
                     }],
                     tasks: [{
                       type: mongoose.Schema.Types.ObjectId,

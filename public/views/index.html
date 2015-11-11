@@ -1,6 +1,6 @@
 <table class="table">
 
-<tr ng-repeat="item in test | orderBy:'-votes' | filter: search" >
+<tr ng-repeat="item in test | orderBy:'-votes' | filter: search | filter: item.completed === 'false'" >
 <td>
 	<a href="/activities/{{item._id}}" class="btn btn-default" >{{item.name}}</a>
 	</td>
@@ -16,8 +16,38 @@
 	Votes:
 	{{item.votes}}
 	</td>
+
+	<td>Completed:
+	{{item.completed}}
+	</td>
 	
 
 	</tr>
 	</table>
 <h1>View past activities</h1>
+<table class="table">
+
+<tr ng-repeat="item in test | orderBy:'-votes' | filter: !item.completed" >
+<td>
+	<a href="/activities/{{item._id}}" class="btn btn-default" >{{item.name}}</a>
+	</td>
+	<td>
+	<img style="width:50px" src="{{item.image}}" alt="">
+	</td>
+	<td>Date:
+	{{item.date}}
+	</td>
+	<td>
+
+	<span ng-click="upVote(item)" class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+	Votes:
+	{{item.votes}}
+	</td>
+
+	<td>Completed:
+	{{item.completed}}
+	</td>
+	
+
+	</tr>
+	</table>

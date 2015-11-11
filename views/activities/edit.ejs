@@ -10,7 +10,11 @@
     <label for="location">Location: </label>
     <input type="text" name="location" id="location"value = "<%= activity.location%>" autofocus>
   </div>
-    <div>
+  <div>
+    <label for="location">Completed: </label>
+    <input type="text" name="completed" id="completed"value = "<%= activity.completed%>" autofocus>
+  </div>
+  <div>
     <label for="location">Date: </label>
     <input type="text" name="date" id="date"value = "<%= activity.date%>" autofocus>
   </div>
@@ -19,13 +23,20 @@
     <input type="text" name="image" id="population"  autofocus value = "<%= activity.image%>">
   </div>
   <div>
-	    <%babies.forEach(function(baby){%>
-	    <input type="checkbox" name="babyid" id="baby.name"  autofocus value = "<%=baby._id  %>"><%=baby.name  %></input>
-			
-	   <% }) %>
-  </div>
-  
-  <input type="submit" value="Edit">
+   <%babies.forEach(function(baby){%>
+   <input type="checkbox" name="babyid" id="baby.name"  autofocus value = "<%=baby._id  %>"><%=baby.name  %></input>
+
+   <% }) %>
+ </div>
+ <div>
+ <%if (user){%>
+        
+  <input type="checkbox" name="user" id="user"  autofocus value = "<%=user  %>"><%=user.username  %></input>
+  <%}%>
+
+</div>
+
+<input type="submit" value="Edit">
 </form>
 
 <% include ../partials/footer %>
